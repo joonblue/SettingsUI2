@@ -2,8 +2,11 @@ package com.sonosite.settingsui2;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -23,7 +26,10 @@ public class SettingsActivity extends AppCompatActivity {
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(R.id.SettingsMenuFragment, mSettingsMenuFragment,
                 Settings_Fragment_Tag);
-        transaction.addToBackStack("Settings");
         transaction.commit();
+    }
+
+    public void onClick(View view) {
+        mSettingsMenuFragment.onClick(view);
     }
 }

@@ -13,7 +13,7 @@
         android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/imageView_UIS30x_SettingsHeader_Back"
+            android:id="@+id/imageView_SettingsHeader_Back"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content" >
 
             <include
-                android:id="@+id/widget_UIS251_PreferencesBtn"
+                android:id="@+id/widget_PreferencesBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="21dp"
@@ -71,7 +71,7 @@
                 layout="@layout/settings_widget" />
 
             <include
-                android:id="@+id/widget_UIS252_CalculationsBtn"
+                android:id="@+id/widget_CalculationsBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="21dp"
@@ -79,7 +79,7 @@
                 layout="@layout/settings_widget" />
 
             <include
-                android:id="@+id/widget_UIS254_LabelsBtn"
+                android:id="@+id/widget_LabelsBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="21dp"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content" >
 
             <include
-                android:id="@+id/widget_UIS256_DicomBtn"
+                android:id="@+id/widget_DicomBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="21dp"
@@ -101,7 +101,7 @@
                 layout="@layout/settings_widget" />
 
             <include
-                android:id="@+id/widget_UIS257_PatientBtn"
+                android:id="@+id/widget_PatientBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="21dp"
@@ -109,7 +109,7 @@
                 layout="@layout/settings_widget" />
 
             <include
-                android:id="@+id/widget_UIS258_EMRBtn"
+                android:id="@+id/widget_EMRBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="21dp"
