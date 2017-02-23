@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 public class SettingsActivity extends AppCompatActivity {
 
+    private static final String LOG_TAG = "SettingsActivity";
     public static String Settings_Fragment_Tag = "SETTINGS_MENU";
 
     private SettingsMenuFragment mSettingsMenuFragment;
