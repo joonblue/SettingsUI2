@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/SettingsMenuFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/holo_dark_gradient">
+
+    <LinearLayout
+        android:id="@+id/layout_UISxxx_SettingsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageView_UIS30x_SettingsHeader_Back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/SETTINGS_PURPLE"
+            android:contentDescription="@string/Back_Arrow"
+            android:onClick="goBack"
+            android:padding="5dp"
+            android:src="@drawable/settings_small" />
+
+        <TextView
+            android:id="@+id/textView_Settings_Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/Settings"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/SETTINGS_TEXT" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_HeaderLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/SETTINGS_LINES"
+        android:gravity="center|center_vertical"
+        android:text="@string/blank" />
+
+    <TableLayout
+        android:id="@+id/fragment_UIS25x_SettingsMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="150dp"
+        android:paddingRight="150dp"
+        android:paddingTop="50dp" >
+
+        <TableRow
+            android:id="@+id/tableRow_Buttons1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/widget_UIS251_PreferencesBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:layout_weight="0.33"
+                layout="@layout/settings_widget" />
+
+            <include
+                android:id="@+id/widget_UIS252_CalculationsBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:layout_weight="0.33"
+                layout="@layout/settings_widget" />
+
+            <include
+                android:id="@+id/widget_UIS254_LabelsBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:layout_weight="0.33"
+                layout="@layout/settings_widget" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow_Buttons2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/widget_UIS256_DicomBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:layout_weight="0.33"
+                layout="@layout/settings_widget" />
+
+            <include
+                android:id="@+id/widget_UIS257_PatientBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:layout_weight="0.33"
+                layout="@layout/settings_widget" />
+
+            <include
+                android:id="@+id/widget_UIS258_EMRBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:layout_weight="0.33"
+                layout="@layout/settings_widget" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

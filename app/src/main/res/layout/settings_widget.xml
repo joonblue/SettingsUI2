@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout_UIS309"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/SETTINGS_PURPLE"
+    android:clickable="true" >
+
+    <TableRow
+        android:id="@+id/tableRow_Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/SETTINGS_PURPLE" >
+
+        <TextView
+            android:id="@+id/textView_UIS309_Blank_1A"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:ems="10"
+            android:text="@string/blank" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow_Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/SETTINGS_PURPLE" >
+
+        <TextView
+            android:id="@+id/textView_UIS309_Blank_2A"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:ems="10"
+            android:text="@string/blank" />
+
+        <ImageView
+            android:id="@+id/imageView_UIS309_Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:ems="10"
+            android:contentDescription="@string/blank"
+            android:gravity="center|center_vertical"
+            android:src="@drawable/dicom_icon" />
+
+        <TextView
+            android:id="@+id/textView_UIS309_Blank_2B"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:ems="10"
+            android:text="@string/blank" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow_Line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/SETTINGS_PURPLE" >
+
+        <TextView
+            android:id="@+id/textView_UIS309_Line"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@color/SETTINGS_TEXT"
+            android:ems="10"
+            android:gravity="center|center_vertical"
+            android:text="@string/blank" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/SETTINGS_PURPLE" >
+
+        <TextView
+            android:id="@+id/textView_UIS309_Blank_4A"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:ems="10"
+            android:text="@string/blank" />
+
+        <TextView
+            android:id="@+id/textView_UIS309_Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:ems="10"
+            android:gravity="center|center_vertical"
+            android:paddingBottom="10dp"
+            android:text="@string/Dicom_Btn"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/SETTINGS_TEXT"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_UIS309_Blank_4B"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:ems="10"
+            android:text="@string/blank" />
+    </TableRow>
+
+</TableLayout>

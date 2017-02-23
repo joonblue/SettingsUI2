@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SettingsUI2</string>
+    <string name="blank"></string>
+    <string name="Back_Arrow" Category="Display Label" Description="Back label" English="Back" MaximumLength="16" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">Back</string>
+    <string name="Settings" Category="Display Label" Description="Settings label" English="Settings" MaximumLength="40" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">Settings</string>
+
+    <string name="Preferences_Btn" Category="Display Label" Description="Preferences button" English="Preferences" MaximumLength="20" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">Preferences</string>
+    <string name="Calculations_Btn" Category="Display Label" Description="OB Calcs button" English="OB Calcs" MaximumLength="20" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">OB Calcs</string>
+    <string name="Labels_Btn" Category="Display Label" Description="Labels button" English="Labels" MaximumLength="20" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">Labels</string>
+    <string name="Dicom_Btn" Category="Display Label" Description="DICOM Profiles button" English="DICOM Profiles" MaximumLength="20" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">DICOM Profiles</string>
+    <string name="Patient_Btn" Category="Display Label" Description="Patient Search button" English="Patient Search" MaximumLength="20" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">Patient Search</string>
+    <string name="EMR_Btn" Category="Display Label" Description="EMR button" English="EMR" MaximumLength="20" MaximumLines="1" MinimumLength="N/A" MinimumLines="1" RecommendedLength="N/A" SubCategory="N/A">EMR</string>
+</resources>
