@@ -10,13 +10,21 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public class SettingsMenuFragment extends Fragment {
+    @BindView(R.id.imageView_SettingsHeader_Back) ImageView ivHeader;
+    private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.settings_menu_fragment, container, false);
+        unbinder = ButterKnife.bind(this, v);
+
         setIconAttributes(v, R.id.widget_PreferencesBtn,
                 R.drawable.settings,
                 getActivity().getString(R.string.Preferences_Btn));
@@ -36,7 +44,7 @@ public class SettingsMenuFragment extends Fragment {
                 R.drawable.emr_icon,
                 getActivity().getString(R.string.EMR_Btn));
 
-        ImageView ivHeader = (ImageView) v.findViewById(R.id.imageView_SettingsHeader_Back);
+//        ImageView ivHeader = (ImageView) v.findViewById(R.id.imageView_SettingsHeader_Back);
         ivHeader.setImageResource(R.drawable.settings_small);
         ivHeader.setVisibility(View.VISIBLE);
 
@@ -52,6 +60,12 @@ public class SettingsMenuFragment extends Fragment {
             }
         });
         return v;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     @Override
