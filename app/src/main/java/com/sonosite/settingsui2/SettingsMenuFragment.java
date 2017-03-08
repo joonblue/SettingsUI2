@@ -1,7 +1,7 @@
 package com.sonosite.settingsui2;
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +12,15 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 public class SettingsMenuFragment extends Fragment {
-    @BindView(R.id.imageView_SettingsHeader_Back) ImageView ivHeader;
+    @BindView(R.id.imageView_SettingsHeader_Back)
+    ImageView ivHeader;
+    @BindView(R.id.textView_Settings_Header)
+    TextView tvHeader;
+
     private Unbinder unbinder;
 
     @Override
@@ -44,22 +49,23 @@ public class SettingsMenuFragment extends Fragment {
                 R.drawable.emr_icon,
                 getActivity().getString(R.string.EMR_Btn));
 
-//        ImageView ivHeader = (ImageView) v.findViewById(R.id.imageView_SettingsHeader_Back);
         ivHeader.setImageResource(R.drawable.settings_small);
         ivHeader.setVisibility(View.VISIBLE);
 
-        TextView tvHeader = (TextView) v.findViewById(R.id.textView_Settings_Header);
         tvHeader.setText(getActivity().getString(R.string.Settings));
 
-        TableLayout widgetPrefrenceBtn = (TableLayout) v.findViewById(R.id.widget_PreferencesBtn);
-
-        widgetPrefrenceBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Preferences", Toast.LENGTH_LONG).show();
-            }
-        });
         return v;
+    }
+
+    public void setIconAttributes(View v, int iWidgetRes, int iIconRes,
+                                  String sName) {
+        TableLayout tlIcon = (TableLayout) v.findViewById(iWidgetRes);
+        TextView tvName =
+                (TextView) tlIcon.findViewById(R.id.textView_Name);
+        tvName.setText(sName);
+        ImageView ivIcon =
+                (ImageView) tlIcon.findViewById(R.id.imageView_Icon);
+        ivIcon.setImageResource(iIconRes);
     }
 
     @Override
@@ -74,12 +80,20 @@ public class SettingsMenuFragment extends Fragment {
 
     }
 
-    public void setIconAttributes(View v, int iWidgetRes, int iIconRes, String sName) {
+    @OnClick({R.id.widget_PreferencesBtn, R.id.widget_CalculationsBtn, R.id.widget_LabelsBtn,
+            R.id.widget_DicomBtn, R.id.widget_PatientBtn, R.id.widget_EMRBtn})
+    public void onClick(View view) {
 
-        TableLayout tlIcon = (TableLayout) v.findViewById(iWidgetRes);
-        TextView tvName = (TextView) tlIcon.findViewById(R.id.textView_Name);
-        tvName.setText(sName);
-        ImageView ivIcon = (ImageView) tlIcon.findViewById(R.id.imageView_Icon);
-        ivIcon.setImageResource(iIconRes);
+        switch (view.getId()) {
+            case R.id.widget_PreferencesBtn:
+                Toast.makeText(getActivity(), "Preferences", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.widget_CalculationsBtn:
+                Toast.makeText(getActivity(), "Calculation", Toast.LENGTH_LONG).show();
+                break;
+            default:
+                Toast.makeText(getActivity(), "Others", Toast.LENGTH_LONG).show();
+                break;
+        }
     }
 }
